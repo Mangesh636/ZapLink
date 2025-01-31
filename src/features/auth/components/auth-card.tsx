@@ -23,9 +23,9 @@ export const AuthCard = ({
   children,
 }: AuthCardProps) => {
   return (
-    <Card className="bg-transparent border-0 p-4">
-      <CardHeader className="flex flex-col gap-4 items-center">
-        <CardTitle className="flex gap-4 flex-col items-center">
+    <Card className="bg-transparent border-0 p-4 w-[400px]">
+      <CardHeader className="flex flex-col gap-y-1.5 justify-center items-center">
+        <CardTitle className="flex gap-y-4 flex-col justify-center items-center">
           <Image
             src={"/logo.svg"}
             alt="ZapLink logo"
@@ -33,9 +33,9 @@ export const AuthCard = ({
             width={45}
             height={45}
           />
-          <span className="text-center text-xl">{authTitle}</span>
+          <span className="text-xl">{authTitle}</span>
         </CardTitle>
-        <CardDescription className="p-3 my-2">
+        <CardDescription className="text-muted-foreground">
           {authDescription}
         </CardDescription>
       </CardHeader>

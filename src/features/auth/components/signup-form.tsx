@@ -48,48 +48,55 @@ export const SignUpForm = () => {
       <Form {...signInForm}>
         <form
           onSubmit={signInForm.handleSubmit(onSubmit)}
-          className="space-y-18"
+          className="space-y-6"
         >
-          <FormField
-            control={signInForm.control}
-            name="name"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Enter your name</FormLabel>
-                <FormControl>
-                  <Input type="text" autoComplete="off" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={signInForm.control}
-            name="email"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Enter your email</FormLabel>
-                <FormControl>
-                  <Input type="email" autoComplete="off" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={signInForm.control}
-            name="password"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Enter your password</FormLabel>
-                <FormControl>
-                  <Input type="password" autoComplete="off" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <Button type="submit" className="w-full">Sign In</Button>
+          <div className="space-y-4">
+            <FormField
+              control={signInForm.control}
+              name="name"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Enter your name</FormLabel>
+                  <FormControl>
+                    <Input type="text" autoComplete="off" {...field} className="mt-2.5" />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={signInForm.control}
+              name="email"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Enter your email</FormLabel>
+                  <FormControl>
+                    <Input type="email" autoComplete="off" {...field} className="mt-2.5" />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={signInForm.control}
+              name="password"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Enter your password</FormLabel>
+                  <FormControl>
+                    <Input type="password" autoComplete="off" {...field} className="mt-2.5" />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
+          <Button
+            type="submit"
+            className="w-full bg-ecstasy-500 hover:bg-ecstasy-500/80 cursor-pointer text-white font-medium text-lg"
+          >
+            Sign In
+          </Button>
         </form>
       </Form>
     </AuthCard>
