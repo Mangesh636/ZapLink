@@ -10,7 +10,7 @@ const SignInSchema = z.object({
 });
 
 const SignUpSchema = z.object({
-  name: z.string({
+  name: z.string().min(1, {
     message: "Name is required.",
   }),
   email: z.string().email({
